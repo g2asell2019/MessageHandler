@@ -4,7 +4,7 @@
  * @name MessageHandler_Halola
  * @author Halola
  * @authorId 737323631117598811
- * @version 3.6.4
+ * @version 0.0.1
  * @description abc
  * @source https://github.com/g2asell2019
  * @updateUrl https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/
@@ -17,7 +17,7 @@
 		return "MessageHandler";
 	}
 	getVersion() {
-		return "3.6.4";
+		return "0.0.1";
 	}
 	getAuthor() {
 		return "Halola";
