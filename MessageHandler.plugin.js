@@ -4,7 +4,7 @@
  * @name MessageHandler_Halola
  * @author Halola
  * @authorId 737323631117598811
- * @version 0.0.1
+ * @version 0.0.2
  * @description abc
  * @source https://github.com/g2asell2019
  * @updateUrl https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/
@@ -17,7 +17,7 @@
 		return "MessageHandler";
 	}
 	getVersion() {
-		return "0.0.1";
+		return "0.0.2";
 	}
 	getAuthor() {
 		return "Halola";
@@ -30,9 +30,9 @@
         // ------------------------------------CONFIG-----------------------------------------------
         
         
-        var delay = 10000;
+        var delay = 5000;
         var listMessage_Halola = ["message1", "message2", "message3"];
-        var listChannel_Halola = ["854323058726666260","939588239034052738","696641547415978004"];
+        var listChannel_Halola = ["935844251013623818","935844251013623819"];
 
         // ------------------------------------CONFIG-----------------------------------------------
 
@@ -53,7 +53,6 @@
                 window.channelId = listChannel_Halola[0];
             }
             //var randomChannel = random_item(listChannel);
-            console.log(window.channelId);
             // send message
             var content = {
                 "content": randomMessage,
@@ -67,7 +66,8 @@
             }
 
             // send message every 30 seconds
-            messAction._sendMessage(channelId, content, {})
+            messAction._sendMessage(window.channelId, content, {})
+            console.log("sent to ", channelId, " with message" , randomMessage);
         }
 
         function random_item(items)
@@ -83,6 +83,6 @@
 	}
 
 	onSwitch() {
-		clearInterval(window.myInterval);
+		//clearInterval(window.myInterval);
 	}
 }
